@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/Builds.*\\.js\\.br",
+      "source": "/Builds.framework.js.br",
       "headers": [
         { "key": "Content-Encoding", "value": "br" },
         { "key": "Content-Type", "value": "application/javascript" },
@@ -9,7 +9,7 @@
       ]
     },
     {
-      "source": "/Builds.*\\.wasm\\.br",
+      "source": "/Builds.wasm.br",
       "headers": [
         { "key": "Content-Encoding", "value": "br" },
         { "key": "Content-Type", "value": "application/wasm" },
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "source": "/Builds.*\\.data\\.br",
+      "source": "/Builds.data.br",
       "headers": [
         { "key": "Content-Encoding", "value": "br" },
         { "key": "Content-Type", "value": "application/octet-stream" },
@@ -25,7 +25,5 @@
       ]
     }
   ],
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" }
-  ]
+  "rewrites": [{ "source": "/", "destination": "/index.html" }]
 }
