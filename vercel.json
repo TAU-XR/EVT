@@ -1,44 +1,28 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "headers": [
     {
-      "source": "/(.*)\\.js\\.br",
+      "source": "/Builds.framework.js.br",
       "headers": [
         { "key": "Content-Encoding", "value": "br" },
         { "key": "Content-Type", "value": "application/javascript" }
       ]
     },
     {
-      "source": "/(.*)\\.wasm\\.br",
+      "source": "/Builds.wasm.br",
       "headers": [
         { "key": "Content-Encoding", "value": "br" },
         { "key": "Content-Type", "value": "application/wasm" }
       ]
     },
     {
-      "source": "/(.*)\\.data\\.br",
+      "source": "/Builds.data.br",
       "headers": [
         { "key": "Content-Encoding", "value": "br" },
         { "key": "Content-Type", "value": "application/octet-stream" }
       ]
-    },
-    {
-      "source": "/(.*)\\.symbols\\.json\\.br",
-      "headers": [
-        { "key": "Content-Encoding", "value": "br" },
-      { "key": "Content-Type", "value": "application/json" }
-      ]
-    },
-
-    /* If you use Threads/SharedArrayBuffer in Unity, you need COOP/COEP */
-    { "source": "/", "headers": [
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" }
-      ]},
-    { "source": "/(.*)", "headers": [
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" }
-      ]}
+    }
   ],
-  "rewrites": [{ "source": "/", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" }
+  ]
 }
